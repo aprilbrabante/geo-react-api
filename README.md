@@ -11,9 +11,11 @@ git clone <your-repo-url>
 cd <repo-folder>
 ```
 
-### 2. **Install dependencies for both client and server**
+### 2. **Install dependencies for both server and client**
 ```bash
-npm i
+npm install           # For server
+cd client
+npm install           # For React client
 ```
 
 ### 3. **Configure environment variables (server)**
@@ -35,12 +37,40 @@ JWT_SECRET="geoTrackerApp"
 - Make sure MongoDB is running or accessible via the connection string.  
 - Keep your `JWT_SECRET` safe for authentication.
 
-- After setup, you can start the server with:
+### 4. **Run the server**
+From the `/server` folder:
 ```bash
 npm start
 ```
 
-- you can start the client with:
+### 5. **Run the client**
+From the `/client` folder:
 ```bash
 npm run dev
 ```
+React app will start (usually on `http://localhost:5173`).
+
+---
+
+## Features
+- **Login:** Simple login form with email and password that validates credentials against the database.Validates credentials against the database.
+- **Home Screen:** 
+  - Displays the current user's IP & geolocation using https://ipinfo.io/geo
+  - Allows searching for any valid IP (https://ipinfo.io/<IP>/json).
+  - Displays search history with checkboxes.
+  - Delete multiple history entries at once.
+  - Clear search to revert to logged-in user’s location.
+
+
+---
+
+---
+
+## Notes
+- Make sure MongoDB is running or accessible via your connection string.
+- Default APIs:
+    - Login: http://localhost:8000/api/login
+    - Geo: https://ipinfo.io/geo (current user) or https://ipinfo.io/<IP>/json (custom IP)
+
+---
+
