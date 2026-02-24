@@ -64,13 +64,12 @@ React app will start (usually on `http://localhost:5173`).
 
 ---
 
----
 
 ## Notes
 - Make sure MongoDB is running or accessible via your connection string.
 - Default APIs:
-    - Login: http://localhost:8000/api/login
-    - Geo: https://ipinfo.io/geo (current user) or https://ipinfo.io/<IP>/json (custom IP)
+    - Login: `http://localhost:8000/api/login`
+    - Geo: `https://ipinfo.io/geo (current user)` or `https://ipinfo.io/<IP>/json (custom IP)`
 
 ---
 
